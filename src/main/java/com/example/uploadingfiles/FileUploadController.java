@@ -33,9 +33,8 @@ public class FileUploadController {
                 path ->
                         MvcUriComponentsBuilder.fromMethodName(FileUploadController.class,
                                 "serveFile",
-                                path.getFileName().toString().build().toUri().toString()
-                                        .collect(Collectors.toList()))
-        ));
+                                path.getFileName().toString()).build().toUri().toString())
+                .collect(Collectors.toList()));
 
         return "uploadForm";
 
